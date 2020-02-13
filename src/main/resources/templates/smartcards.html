@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>단어장 목록</title>
+</head>
+<body>
+	<h3>목록</h3>
+	<p th:each="smartcard : ${smartcardList}">
+		<a th:text="${smartcard.name}" th:href="@{/smartcard/words(id=${smartcard.id})}"></a>
+	</p>
+</body>
+</html>
